@@ -1,31 +1,93 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+@{
+    ViewBag.Title = "Connected Home";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="isp-hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+        <span class="eyebrow">Fiber internet in your pocket</span>
+        <h1 id="hero-title">Manage your home Wi-Fi, billing, and support from one mobile app.</h1>
+        <p class="lead">An iOS and Android-ready customer portal for internet service providers with self-service account tools, outage updates, plan upgrades, and technician scheduling.</p>
+        <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#download">Get the app</a>
+            <a class="btn btn-default btn-lg" href="#features">Explore features</a>
+        </div>
+    </div>
+    <div class="phone-preview" aria-label="Mobile app dashboard preview">
+        <div class="phone-speaker"></div>
+        <div class="phone-screen">
+            <div class="status-card">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>Service online</strong>
+                    <small>940 Mbps fiber plan</small>
+                </div>
+            </div>
+            <div class="speed-ring">
+                <span>892</span>
+                <small>Mbps download</small>
+            </div>
+            <div class="quick-grid">
+                <span>Pay bill</span>
+                <span>Wi-Fi</span>
+                <span>Support</span>
+                <span>Outages</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<section id="features" class="section-block">
+    <div class="section-heading">
+        <span class="eyebrow">Customer self-service</span>
+        <h2>Everything subscribers expect from a modern ISP app.</h2>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="feature-grid">
+        <article class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Live speed checks</h3>
+            <p>Show real-time connection health, speed-test history, and recommended fixes before a customer opens a ticket.</p>
+        </article>
+        <article class="feature-card">
+            <span class="feature-icon">💳</span>
+            <h3>Billing and autopay</h3>
+            <p>Let customers review invoices, manage payment methods, enroll in autopay, and receive payment reminders.</p>
+        </article>
+        <article class="feature-card">
+            <span class="feature-icon">📡</span>
+            <h3>Outage alerts</h3>
+            <p>Send push-ready outage notices, restoration ETAs, and maintenance updates based on the subscriber service address.</p>
+        </article>
+        <article class="feature-card">
+            <span class="feature-icon">🛠️</span>
+            <h3>Technician booking</h3>
+            <p>Offer guided troubleshooting, support chat entry points, and appointment scheduling with arrival-window reminders.</p>
+        </article>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</section>
+
+<section class="dashboard-strip" aria-label="Account overview">
+    <div>
+        <span class="metric">99.99%</span>
+        <p>network uptime target</p>
     </div>
-</div>
+    <div>
+        <span class="metric">24/7</span>
+        <p>support and outage updates</p>
+    </div>
+    <div>
+        <span class="metric">2 min</span>
+        <p>average bill payment flow</p>
+    </div>
+</section>
+
+<section id="download" class="download-panel">
+    <div>
+        <span class="eyebrow">iOS + Android</span>
+        <h2>Install from the browser today, package for app stores next.</h2>
+        <p>This mobile-first experience includes progressive web app metadata and an offline support screen so it can be tested on iPhone and Android devices immediately.</p>
+    </div>
+    <div class="store-buttons" aria-label="Download options">
+        <a href="/manifest.json" class="store-button"> App Store ready</a>
+        <a href="/manifest.json" class="store-button">▶ Google Play ready</a>
+    </div>
+</section>

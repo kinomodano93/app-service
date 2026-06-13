@@ -1,0 +1,20 @@
+{
+  "name": "FiberConnect ISP Mobile",
+  "short_name": "FiberConnect",
+  "description": "Mobile customer portal for internet service provider subscribers.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f8fbff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/Content/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
