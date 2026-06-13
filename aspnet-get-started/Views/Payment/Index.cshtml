@@ -1,0 +1,49 @@
+@model aspnet_get_started.Models.XenditPaymentViewModel
+@{
+    ViewBag.Title = "Pay Bill";
+}
+
+<section class="payment-page" aria-labelledby="payment-title">
+    <div class="payment-copy">
+        <span class="eyebrow">Xendit payment gateway</span>
+        <h1 id="payment-title">Pay your internet bill securely.</h1>
+        <p class="lead">FiberConnect creates a Xendit-hosted invoice and redirects subscribers to checkout, so the app can support cards, bank transfers, virtual accounts, e-wallets, QR payments, and other methods enabled in your Xendit account.</p>
+        <ul class="payment-benefits">
+            <li>Hosted checkout keeps sensitive payment details off this app.</li>
+            <li>Email invoice delivery can be enabled from the Xendit invoice request.</li>
+            <li>Webhook endpoint is ready for Xendit payment status callbacks.</li>
+        </ul>
+    </div>
+
+    <div class="payment-card">
+        <h2>Sample monthly bill</h2>
+        @using (Html.BeginForm("CreateInvoice", "Payment", FormMethod.Post, new { @class = "payment-form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.AccountNumber)
+                @Html.TextBoxFor(m => m.AccountNumber, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.AccountNumber, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.CustomerEmail)
+                @Html.TextBoxFor(m => m.CustomerEmail, new { @class = "form-control", type = "email" })
+                @Html.ValidationMessageFor(m => m.CustomerEmail, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Amount)
+                @Html.TextBoxFor(m => m.Amount, new { @class = "form-control", type = "number", min = "1", step = "1" })
+                @Html.ValidationMessageFor(m => m.Amount, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description)
+                @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Continue to Xendit checkout</button>
+        }
+    </div>
+</section>

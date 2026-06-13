@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="FiberConnect app icon">
+  <rect width="512" height="512" rx="112" fill="#2563eb"/>
+  <path d="M105 248c83-80 219-80 302 0" fill="none" stroke="#dbeafe" stroke-width="42" stroke-linecap="round"/>
+  <path d="M166 311c50-48 130-48 180 0" fill="none" stroke="#fff" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="256" cy="374" r="34" fill="#fff"/>
+  <path d="M128 138h256" stroke="#93c5fd" stroke-width="36" stroke-linecap="round" opacity=".8"/>
+</svg>

@@ -1,0 +1,12 @@
+@{
+    ViewBag.Title = "Payment Status";
+}
+
+<section class="payment-page payment-status" aria-labelledby="payment-status-title">
+    <div class="payment-card">
+        <span class="eyebrow">Xendit checkout</span>
+        <h1 id="payment-status-title">@ViewBag.PaymentStatus</h1>
+        <p class="lead">@ViewBag.PaymentMessage</p>
+        <p><a class="btn btn-primary btn-lg" href="@Url.Action("Index", "Home")">Back to app home</a></p>
+    </div>
+</section>
